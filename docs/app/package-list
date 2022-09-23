@@ -1,0 +1,18 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.imagelingo////PointingToDeclaration/app/com.example.imagelingo/index.html
+$dokka.location:com.example.imagelingo/CaptureActivity.Companion///PointingToDeclaration/app/com.example.imagelingo/-capture-activity/-companion/index.html
+$dokka.location:com.example.imagelingo/CaptureActivity.DetectionResult///PointingToDeclaration/app/com.example.imagelingo/-capture-activity/-detection-result/index.html
+$dokka.location:com.example.imagelingo/CaptureActivity.DetectionResult/DetectionResult/#android.graphics.RectF#kotlin.String/PointingToDeclaration/app/com.example.imagelingo/-capture-activity/-detection-result/-detection-result.html
+$dokka.location:com.example.imagelingo/CaptureActivity.DetectionResult/boundingBox/#/PointingToDeclaration/app/com.example.imagelingo/-capture-activity/-detection-result/bounding-box.html
+$dokka.location:com.example.imagelingo/CaptureActivity.DetectionResult/text/#/PointingToDeclaration/app/com.example.imagelingo/-capture-activity/-detection-result/text.html
+$dokka.location:com.example.imagelingo/CaptureActivity///PointingToDeclaration/app/com.example.imagelingo/-capture-activity/index.html
+$dokka.location:com.example.imagelingo/CaptureActivity/CaptureActivity/#/PointingToDeclaration/app/com.example.imagelingo/-capture-activity/-capture-activity.html
+$dokka.location:com.example.imagelingo/CaptureActivity/objectInPic/#/PointingToDeclaration/app/com.example.imagelingo/-capture-activity/object-in-pic.html
+$dokka.location:com.example.imagelingo/CaptureActivity/onClick/#android.view.View?/PointingToDeclaration/app/com.example.imagelingo/-capture-activity/on-click.html
+$dokka.location:com.example.imagelingo/MainActivity///PointingToDeclaration/app/com.example.imagelingo/-main-activity/index.html
+$dokka.location:com.example.imagelingo/MainActivity/MainActivity/#/PointingToDeclaration/app/com.example.imagelingo/-main-activity/-main-activity.html
+$dokka.location:com.example.imagelingo/TranslationActivity///PointingToDeclaration/app/com.example.imagelingo/-translation-activity/index.html
+$dokka.location:com.example.imagelingo/TranslationActivity/TranslationActivity/#/PointingToDeclaration/app/com.example.imagelingo/-translation-activity/-translation-activity.html
+com.example.imagelingo
+
