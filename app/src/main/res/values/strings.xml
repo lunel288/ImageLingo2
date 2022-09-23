@@ -3,4 +3,5 @@
     <string name="translate">Translate</string>
     <string name="goBack">Return</string>
     <string name="capture_image">Capture</string>
+    <string name="maori_no_translation">Maori: Translation Unavailable</string>
 </resources>
