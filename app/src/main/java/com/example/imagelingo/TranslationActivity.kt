@@ -6,6 +6,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 
+/**
+ * Translation Activity:
+ * In this class we take the object which was recognised in
+ * Capture Activity, and display the translations necessary.
+ */
+
 class TranslationActivity : AppCompatActivity() {
 
     private val wordList = listOf<String>("Pen", "Laptop", "Clock")

@@ -20,6 +20,12 @@ import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.task.vision.detector.ObjectDetector
 import java.util.*
 
+/**
+ * Capture Activity:
+ * In this class there is camera input, object recognition, and
+ * the option to go to the Translation Activity.
+ */
+
 class CaptureActivity : AppCompatActivity(), View.OnClickListener {
 
     companion object {
