@@ -5,7 +5,6 @@ package com.example.imagelingo
 import android.app.Activity
 import android.content.Intent
 import android.graphics.*
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
@@ -13,11 +12,19 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.task.vision.detector.ObjectDetector
+import java.util.*
+
+/**
+ * Capture Activity:
+ * In this class there is camera input, object recognition, and
+ * the option to go to the Translation Activity.
+ */
 
 class CaptureActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -27,10 +34,15 @@ class CaptureActivity : AppCompatActivity(), View.OnClickListener {
         private const val MAX_FONT_SIZE = 96F
     }
 
+
+
     private lateinit var txtOutput: TextView
     private lateinit var btnCapture: Button
+    private lateinit var btnTranslate: Button
     private lateinit var imageView: ImageView
+
     var objectInPic: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_capture)
@@ -38,17 +50,11 @@ class CaptureActivity : AppCompatActivity(), View.OnClickListener {
         txtOutput = findViewById(R.id.txtOutput)
         imageView = findViewById(R.id.imageView)
         btnCapture = findViewById(R.id.btnCapture)
+        btnTranslate = findViewById(R.id.btnTranslate)
 
         btnCapture.setOnClickListener(this)
-
-        val btnTranslate = findViewById<Button>(R.id.btnTranslate)
-
-
-        btnTranslate.setOnClickListener {
-
-            val nextPage = Intent(this, TranslationActivity::class.java)
-            startActivity(nextPage)
-        }
+        btnTranslate.setOnClickListener(this)
+        btnTranslate.isEnabled = false
     }
 
     @Deprecated("Deprecated in Java")
@@ -73,8 +79,17 @@ class CaptureActivity : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(this, "Unable to open camera", Toast.LENGTH_SHORT).show()
                 }
             }
+            R.id.btnTranslate -> {
+                val nextPage = Intent(this, TranslationActivity::class.java)
+                val loc: Locale = Locale.getDefault()
+                objectInPic = objectInPic.capitalize(loc)
+
+                nextPage.putExtra("captured_image", objectInPic )
+                startActivity(nextPage)
+            }
+            }
         }
-        }
+
 
     /**
      * runObjectDetection(bitmap: Bitmap)
@@ -105,6 +120,7 @@ class CaptureActivity : AppCompatActivity(), View.OnClickListener {
             val category = it.categories.first()
             val text = "${category.label}, ${category.score.times(100).toInt()}%"
             objectInPic = category.label
+
             // Create a data object to display the detection result
             DetectionResult(it.boundingBox, text)
         }
@@ -113,6 +129,9 @@ class CaptureActivity : AppCompatActivity(), View.OnClickListener {
         runOnUiThread {
             imageView.setImageBitmap(imgWithResult)
             txtOutput.setText(objectInPic)
+            if(objectInPic != ""){
+                btnTranslate.isEnabled = true
+            }
         }
 
     }
