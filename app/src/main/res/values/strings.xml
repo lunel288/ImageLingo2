@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ImageLingo</string>
+    <string name="translate">Translate</string>
+    <string name="goBack">Return</string>
+</resources>
