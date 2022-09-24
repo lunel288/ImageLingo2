@@ -35,6 +35,7 @@
         android:layout_marginBottom="8dp"
         android:padding="25dp"
         android:paddingBottom="0dp"
+        android:backgroundTint="#26a0da"
         android:text="@string/goBack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

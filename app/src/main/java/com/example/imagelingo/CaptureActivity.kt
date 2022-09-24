@@ -131,6 +131,7 @@ class CaptureActivity : AppCompatActivity(), View.OnClickListener {
             txtOutput.setText(objectInPic)
             if(objectInPic != ""){
                 btnTranslate.isEnabled = true
+                btnTranslate.setBackgroundColor(getResources().getColor(R.color.light_blue))
             }
         }
 
@@ -152,7 +153,7 @@ class CaptureActivity : AppCompatActivity(), View.OnClickListener {
         detectionResults.forEach {
             // draw bounding box
             pen.color = Color.RED
-            pen.strokeWidth = 8F
+            pen.strokeWidth = 1F
             pen.style = Paint.Style.STROKE
             val box = it.boundingBox
             canvas.drawRect(box, pen)
