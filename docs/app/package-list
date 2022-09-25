@@ -1,5 +1,41 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
+$dokka.location:com.example.imagelingo.data////PointingToDeclaration/app/com.example.imagelingo.data/index.html
+$dokka.location:com.example.imagelingo.data/MyObjects///PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/index.html
+$dokka.location:com.example.imagelingo.data/MyObjects/MyObjects/#kotlin.Int#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/-my-objects.html
+$dokka.location:com.example.imagelingo.data/MyObjects/englishObject/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/english-object.html
+$dokka.location:com.example.imagelingo.data/MyObjects/englishSentence/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/english-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjects/id/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/id.html
+$dokka.location:com.example.imagelingo.data/MyObjects/japaneseObject/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/japanese-object.html
+$dokka.location:com.example.imagelingo.data/MyObjects/japaneseSentence/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/japanese-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjects/maoriObject/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/maori-object.html
+$dokka.location:com.example.imagelingo.data/MyObjects/maoriSentence/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/maori-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjects/samoanObject/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/samoan-object.html
+$dokka.location:com.example.imagelingo.data/MyObjects/samoanSentence/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects/samoan-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDao///PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-dao/index.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDao/getEnglishSentence/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-dao/get-english-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDao/getJapaneseSentence/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-dao/get-japanese-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDao/getJapaneseWord/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-dao/get-japanese-word.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDao/getMaoriSentence/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-dao/get-maori-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDao/getMaoriWord/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-dao/get-maori-word.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDao/getSamoanSentence/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-dao/get-samoan-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDao/getSamoanWord/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-dao/get-samoan-word.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDatabase.Companion///PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-database/-companion/index.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDatabase.Companion/getDatabase/#android.content.Context/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-database/-companion/get-database.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDatabase///PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-database/index.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDatabase/MyObjectsDatabase/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-database/-my-objects-database.html
+$dokka.location:com.example.imagelingo.data/MyObjectsDatabase/myObjectsDao/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-database/my-objects-dao.html
+$dokka.location:com.example.imagelingo.data/MyObjectsRepository///PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-repository/index.html
+$dokka.location:com.example.imagelingo.data/MyObjectsRepository/MyObjectsRepository/#com.example.imagelingo.data.MyObjectsDao/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-repository/-my-objects-repository.html
+$dokka.location:com.example.imagelingo.data/MyObjectsRepository/getEnglishSentence/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-repository/get-english-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjectsRepository/getMaoriSentence/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-repository/get-maori-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjectsRepository/getMaoriWord/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-repository/get-maori-word.html
+$dokka.location:com.example.imagelingo.data/MyObjectsViewModel///PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-view-model/index.html
+$dokka.location:com.example.imagelingo.data/MyObjectsViewModel/MyObjectsViewModel/#android.app.Application/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-view-model/-my-objects-view-model.html
+$dokka.location:com.example.imagelingo.data/MyObjectsViewModel/getEnglishSentence/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-view-model/get-english-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjectsViewModel/getMaoriSentence/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-view-model/get-maori-sentence.html
+$dokka.location:com.example.imagelingo.data/MyObjectsViewModel/getMaoriWord/#kotlin.String/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-view-model/get-maori-word.html
+$dokka.location:com.example.imagelingo.data/MyObjectsViewModel/japaneseSentence/#/PointingToDeclaration/app/com.example.imagelingo.data/-my-objects-view-model/japanese-sentence.html
 $dokka.location:com.example.imagelingo////PointingToDeclaration/app/com.example.imagelingo/index.html
 $dokka.location:com.example.imagelingo/CaptureActivity.Companion///PointingToDeclaration/app/com.example.imagelingo/-capture-activity/-companion/index.html
 $dokka.location:com.example.imagelingo/CaptureActivity.DetectionResult///PointingToDeclaration/app/com.example.imagelingo/-capture-activity/-detection-result/index.html
@@ -15,4 +51,5 @@ $dokka.location:com.example.imagelingo/MainActivity/MainActivity/#/PointingToDec
 $dokka.location:com.example.imagelingo/TranslationActivity///PointingToDeclaration/app/com.example.imagelingo/-translation-activity/index.html
 $dokka.location:com.example.imagelingo/TranslationActivity/TranslationActivity/#/PointingToDeclaration/app/com.example.imagelingo/-translation-activity/-translation-activity.html
 com.example.imagelingo
+com.example.imagelingo.data
 
