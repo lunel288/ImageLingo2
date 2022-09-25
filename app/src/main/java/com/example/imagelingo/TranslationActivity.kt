@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.imagelingo.data.MyObjectsViewModel
 
@@ -39,12 +40,25 @@ class TranslationActivity : AppCompatActivity() {
 
         txtUntranslated.setText("English: " + captured_image)
 
-            if (target_language == "Maori") {
-                txtTranslated.setText(mMyObjectsViewModel.getMaoriWord("Clock"))
-                txtTranslatedSentence.setText(mMyObjectsViewModel.getMaoriWord("Clock"))
+        if (target_language == "Maori") {
+            var translation: String = "Maori: "
+            mMyObjectsViewModel.getMaoriWord(captured_image!!).observe(this, Observer { data ->
+                translation += data
+                txtTranslated.setText(translation)
+            })
 
+            var untranslatedSentence: String = "English Sentence: "
+            mMyObjectsViewModel.getEnglishSentence(captured_image!!).observe(this, Observer { data ->
+                untranslatedSentence += data
+                txtUntranslatedSentence.setText(untranslatedSentence)
+            })
 
-            } //else if (not found in database)
+            var translatedSentence: String = "Maori Sentence: "
+            mMyObjectsViewModel.getMaoriSentence(captured_image!!).observe(this, Observer { data ->
+                translatedSentence += data
+                txtTranslatedSentence.setText(translatedSentence)
+            })
+        } //else if (other language - not available yet)
             //txtTranslated.setText(getString(R.string.maori_no_translation))
 
             val btnGoBack = findViewById<Button>(R.id.btnReturn)
@@ -53,17 +67,7 @@ class TranslationActivity : AppCompatActivity() {
                 val nextPage = Intent(this, CaptureActivity::class.java)
                 startActivity(nextPage)
             }
-            val btnTest = findViewById<Button>(R.id.btnReturn2)
-            btnTest.setOnClickListener {
-                var translation: String = "Maori: "
-                translation += mMyObjectsViewModel.getMaoriWord(captured_image!!)
-                var translatedSentence: String = "Maori Sentence: "
-                translatedSentence += mMyObjectsViewModel.getMaoriSentence(captured_image)
-                var untranslatedSentence: String = "English Sentence: "
-                untranslatedSentence += mMyObjectsViewModel.getEnglishSentence(captured_image)
-                txtTranslated.setText(translation)
-                txtUntranslatedSentence.setText(untranslatedSentence)
-                txtTranslatedSentence.setText(translatedSentence)
-            }
+
+
         }
     }

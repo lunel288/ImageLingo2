@@ -1,18 +1,20 @@
 package com.example.imagelingo.data
 
+import androidx.lifecycle.LiveData
+
 
 class MyObjectsRepository (private val myObjectsDao: MyObjectsDao){
 
 
-    suspend fun getMaoriWord(string: String) : String{
+    fun getMaoriWord(string: String) : LiveData<String>{
         return myObjectsDao.getMaoriWord(string)
     }
 
-    suspend fun getMaoriSentence(string: String) : String{
+     fun getMaoriSentence(string: String) : LiveData<String>{
         return myObjectsDao.getMaoriSentence(string)
     }
 
-    suspend fun getEnglishSentence(string: String) : String{
+     fun getEnglishSentence(string: String) : LiveData<String>{
         return myObjectsDao.getEnglishSentence(string)
     }
 

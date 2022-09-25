@@ -2,6 +2,8 @@ package com.example.imagelingo.data
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -11,40 +13,25 @@ class MyObjectsViewModel (application: Application): AndroidViewModel(applicatio
 
     private val repository: MyObjectsRepository
 
+    val japaneseSentence = MutableLiveData<String>()
     init{
         val myObjectsDao = MyObjectsDatabase.getDatabase(application).myObjectsDao()
         repository = MyObjectsRepository(myObjectsDao)
     }
 
-    fun getMaoriWord(string: String):String{
-        var obj: String=""
+    fun getMaoriWord(string: String):LiveData<String>{
+        return repository.getMaoriWord(string)
 
-        viewModelScope.launch(Dispatchers.IO){
-            obj = repository.getMaoriWord(string)
-
-        }
-        return obj
     }
 
-    fun getMaoriSentence(string: String):String{
-        var obj: String=""
+    fun getMaoriSentence(string: String):LiveData<String>{
+        return repository.getMaoriSentence(string)
 
-        viewModelScope.launch(Dispatchers.IO){
-            obj = repository.getMaoriSentence(string)
-
-        }
-        return obj
     }
 
-    fun getEnglishSentence(string: String):String{
-        var obj: String=""
+    fun getEnglishSentence(string: String):LiveData<String>{
+        return repository.getEnglishSentence(string)
 
-        viewModelScope.launch(Dispatchers.IO){
-
-            obj = repository.getEnglishSentence(string)
-
-        }
-        return obj
     }
 
 }
