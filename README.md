@@ -1,4 +1,4 @@
-# ImageLingo - Alpha
+# ImageLingo - Beta
 
 With our application you can take an image, and our object detection will recognise objects from a list of objects
 This object will then be translated 
@@ -6,6 +6,9 @@ This object will then be translated
 We plan on using a different model with different objects in our final versions as our target object list is objects
 in a classroom.
 
+## Current Objects with Maori Translation + Sentence:
+Clock,Person,Backpack,Bottle,Cup,Banana,Apple,Sandwich,Couch,
+Mouse,Keyboard,Cell phone,Book,Scissors
 
 The tflite model used is the efficientdet/lite0/detection model from TensorFlowHub.
 
@@ -28,13 +31,17 @@ We plan on increasing the amount of objects able to be translated.
 We plan on adding more languages.
 We plan on adding sentences to be translated with the objects.
 We plan on changing the tflite model to one which better suits our classroom setting.
+(Specifically Google Mobile Object labeler - https://tfhub.dev/google/lite-model/object_detection/mobile_object_labeler_v1/1)
 We plan on improving the aesthetic of the app - animation, transitions, colour, layouts.
-
+We plan on doing user testing
+We plan on setting up GitHub Actions to call a static analysis tool and a code coverage tool
 
 # How to run the application:
-Download the project from Github, and use an Android Emulator to run the application. An IDE such as Android Studio
+Download the project from Github, and use an Android Emulator to run the application (or your own android device). An IDE such as Android Studio
 or  IntelliJ IDEA will work. 
 
+# Source Code Documentation:
+Source code documentation is extracted using Dokka and github actions, and the index.html file can be found at app\build\dokka\html 
 
 # Group members:
 Eliot Luna 
