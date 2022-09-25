@@ -85,6 +85,7 @@ class CaptureActivity : AppCompatActivity(), View.OnClickListener {
                 objectInPic = objectInPic.capitalize(loc)
 
                 nextPage.putExtra("captured_image", objectInPic )
+                nextPage.putExtra("target_language", "Maori" )
                 startActivity(nextPage)
             }
             }
